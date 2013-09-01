@@ -1,0 +1,27 @@
+<h1>Listing user_areas</h1>
+
+<table>
+  <tr>
+    <th>Area</th>
+    <th>Type</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_areas.each do |user_area| %>
+  <tr>
+    <td><%= user_area.area_id %></td>
+    <td><%= user_area.type_id %></td>
+    <td><%= user_area.user_id %></td>
+    <td><%= link_to 'Show', user_area %></td>
+    <td><%= link_to 'Edit', edit_user_area_path(user_area) %></td>
+    <td><%= link_to 'Destroy', user_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User area', new_user_area_path %>

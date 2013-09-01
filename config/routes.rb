@@ -1,4 +1,19 @@
 Met::Application.routes.draw do
+  resources :user_areas
+
+
+  resources :user_types
+
+
+  resources :areas
+
+
+  resources :systems
+
+
+  resources :users
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
